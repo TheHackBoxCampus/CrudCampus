@@ -1,0 +1,72 @@
+<form>
+    <button name="getCampers">Listar a reclutas que lleven 2 meses </button>
+    
+    <div>
+        <button name="getCampersTeam">Listar por team</button>
+        <select class="select_team_list">
+            <option value="1">Sputnik</option>
+            <option value="2">Apolo</option>
+            <option value="3">Artemis</option>
+        </select>
+    </div>
+</form>
+<div class="result">
+</div>
+
+
+<style>
+    form div {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+        gap: 1em
+    }
+    
+    .result {
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+        gap: 1em
+    }
+    .result div {
+        background-color: #040b14;
+        display: flex;
+        padding: 1em;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        max-height: 300px;
+        max-width: 500px;
+        border-radius: 0.5em;
+        color: #Fff
+    }
+
+   button {
+        padding: 1em;
+        border-radius: 1em;
+        color: #Fff;
+        background: #000;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 300ms ease;
+    }
+
+   button:hover {
+    background: #fff;
+    color: #000; 
+}
+
+    select {
+        outline: none;
+        border: none;
+        padding: 0.4em;
+        border-radius: 1rem;
+        background-color: #fff;
+    }
+    .undefined-campers {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+</style>

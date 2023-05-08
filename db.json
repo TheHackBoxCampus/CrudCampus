@@ -1,0 +1,71 @@
+{
+  "teamCampus": [
+    {
+      "id": 1,
+      "nombre": "Sputnik",
+      "trainer": "Miguel"
+    },
+    {
+      "id": 2,
+      "nombre": "Apolo",
+      "trainer": "jolhver"
+    },
+    {
+      "id": 3,
+      "nombre": "Artemis",
+      "trainer": "Bevmer"
+    }
+  ],
+  "reclutas": [
+    {
+      "id": 1,
+      "nombre": "MIller",
+      "edad": "18",
+      "telefono": "15545454545",
+      "direccion": "151545454545",
+      "nacimiento": "2023-05-24",
+      "documento": "444545218451",
+      "teamCampusId": 3,
+      "fechaI": "2"
+    },
+    {
+      "id": 2,
+      "nombre": "francisco",
+      "edad": "60",
+      "telefono": "1230102103120",
+      "direccion": "2131232132131",
+      "nacimiento": "2023-04-30",
+      "documento": "12121212155",
+      "teamCampusId": 2,
+      "fechaI": "2"
+    }
+  ],
+  "ModuloSkill": [
+    {
+      "id": 1,
+      "nombre": "Backend"
+    },
+    {
+      "id": 2,
+      "nombre": "Front end"
+    },
+    {
+      "id": 3,
+      "nombre": "Ambas"
+    }
+  ],
+  "Skills": [
+    {
+      "name": "Vue js",
+      "ModuloSkillId": 2,
+      "id": 1
+    }
+  ],
+  "Evaluacion": [
+    {
+      "id_recluta": 1,
+      "id_modulo": 1,
+      "nota": ""
+    }
+  ]
+}

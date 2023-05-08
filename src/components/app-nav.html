@@ -1,0 +1,244 @@
+<nav>
+    <div class="navHeader">
+        <img src="https://i.pinimg.com/736x/c4/71/c5/c471c54444193f8d4dbdaebe8f9bd426.jpg">
+        <h3>Campers CRUD</h3>
+    </div>
+    
+    <div class="sections-forms">
+        <div id="addCamper">
+            <img id="svg" src="../../assets/img/facturacion.svg">
+            <span>Agregar Camper</span>
+        </div>
+        <div id="listCamper"> 
+            <img id="svg" src="../../assets/img/users.svg">
+            <span>Listar Campers</span>
+        </div>
+        <div id="skillCamper"> 
+            <img id="svg" src="../../assets/img/skill.svg">
+            <span>Skill de los campers</span>
+        </div>
+    </div>
+</nav>
+
+<!-- El mismo contenido para mobile solo que sin webComponents-->
+<div class="content-responsive" id="capa">
+    <div>
+        <div>
+            <img src="https://i.pinimg.com/736x/c4/71/c5/c471c54444193f8d4dbdaebe8f9bd426.jpg">
+             <h3>Campers CRUD</h3>
+        </div>
+        
+        <div class="sections">
+            <div id="addCamper">
+                <img id="svg" src="../../assets/img/facturacion.svg">
+                <span >Agregar camper</span>
+            </div>
+            <div id="listCamper">
+                <img id="svg" src="../../assets/img/users.svg">
+                <span>Listar Campers</span>
+            </div>
+            <div id="skillCamper"> 
+                <img id="svg" src="../../assets/img/skill.svg">
+                <span>Skill de los campers</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="responsive_navbar">
+    <img class="menu" id="svg" src="../../assets/img/menu.svg">
+</div>
+
+
+<style>
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .active {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .content-responsive {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        animation: moveLeft 1.3s forwards
+    }
+
+    .content-responsive div{
+        background:  #040b14;
+        height: 100%;
+        width: 30%;
+        color: #fff;
+    }
+    
+    .responsive_navbar {
+        width: 40px;
+        position: relative;
+        top: 2em;
+        left: 2em;
+        bottom: 0;
+        display: none;
+    }
+
+    /*NAV HEADER global styles*/
+    nav {
+        background: #040b14;
+        color: #fff;
+        position: fixed;
+        width: 15%;
+        height: 100vh;
+    }
+
+    /*NAV HEADER*/
+    .content-responsive div div:nth-child(1){
+        width: 70%;
+    }
+    .navHeader, .content-responsive div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .navHeader > img{
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+
+    .content-responsive div div:nth-child(1) img {
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+    .navHeader > h3, .content-responsive div h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1em;
+        margin-top: 2em;
+    }
+
+    .content-responsive div h3 {
+        font-size: 2em;
+    }
+    
+    /*SECTIONS*/
+    .sections-forms{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+    .content-responsive .sections {
+        width: 90%;
+    }
+    .content-responsive .sections div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+    .sections-forms div{
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        transition: 300ms ease;
+        cursor: pointer;
+    }
+
+
+    .sections-forms div::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        border: 3px solid #fff;
+        opacity: 0;
+        transition: 300ms width linear;
+    }
+
+    .sections-forms div:hover::after{
+        width: 100%;
+        opacity: 0.8;
+    }
+    
+    /*svgs en images*/
+    #svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    /*Boton menu*/
+    .menu {
+        background: #040b14;
+        padding: 0.4em;
+        border-radius: 0.4em;
+        width: 40px !important;
+        height: 40px !important;
+        transition: 300ms ease;
+        cursor: pointer;
+    }
+
+    .menu:hover {
+        background: #0c213c ;
+    }   
+
+    /*Mediaquerys*/
+    @media (max-width: 1000px) {
+        .responsive_navbar {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        .responsive_navbar {
+            display: none;
+        }
+
+        nav {
+            display: block;
+        }
+
+        .content-responsive {
+            display: none !important;
+        }
+    }
+
+    @keyframes moveLeft {
+        0%{
+            transform: translateX(400px);
+        }
+
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes moveRight {
+        0%{
+            transform: translateX(0);
+        }
+
+        100%{
+            transform: translateX(400px);
+        }
+    }
+</style>

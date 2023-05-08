@@ -1,0 +1,47 @@
+<form>
+    <input type="text" placeholder="Skill" name="name">
+    <select name="ModuloSkillId">
+        <option value="1">Backend</option>
+        <option value="2">Front End</option>
+        <option value="3">Ambas</option>
+    </select>
+    <input type="submit" value="Envia tu modulo" name="postModules">
+</form>
+<style>
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em
+    }
+
+    form input{
+        padding: 1em;
+        font-family: 'DM Sans', sans-serif;
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+    }
+
+    form input[type="submit"] {
+        background: #000;
+        color: #fff;
+        outline: none;
+        border: none;
+        transition: 300ms ease;
+        cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+        color: #000;
+        background: transparent;
+    }
+
+    select {
+        outline: none;
+        border: none;
+        padding: 0.4em;
+        border-radius: 1rem;
+        background-color: #fff;
+    }
+</style>
